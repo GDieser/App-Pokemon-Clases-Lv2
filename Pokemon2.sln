@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34525.116
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pokemon2", "Pokemon2\Pokemon2.csproj", "{37CC679C-E3EB-4B0B-B61C-07CE0215F33D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dominio", "dominio\dominio.csproj", "{7CAB93A4-8696-49EA-8D57-FDCC4ABB3C90}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "negocio", "negocio\negocio.csproj", "{378A3A45-A1AE-47BB-B6A4-914CB0FA4815}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{37CC679C-E3EB-4B0B-B61C-07CE0215F33D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{37CC679C-E3EB-4B0B-B61C-07CE0215F33D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{37CC679C-E3EB-4B0B-B61C-07CE0215F33D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{37CC679C-E3EB-4B0B-B61C-07CE0215F33D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7CAB93A4-8696-49EA-8D57-FDCC4ABB3C90}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7CAB93A4-8696-49EA-8D57-FDCC4ABB3C90}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7CAB93A4-8696-49EA-8D57-FDCC4ABB3C90}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7CAB93A4-8696-49EA-8D57-FDCC4ABB3C90}.Release|Any CPU.Build.0 = Release|Any CPU
+		{378A3A45-A1AE-47BB-B6A4-914CB0FA4815}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{378A3A45-A1AE-47BB-B6A4-914CB0FA4815}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{378A3A45-A1AE-47BB-B6A4-914CB0FA4815}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{378A3A45-A1AE-47BB-B6A4-914CB0FA4815}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E46F27E4-67D4-475D-9D35-82B6E0E28124}
+	EndGlobalSection
+EndGlobal
