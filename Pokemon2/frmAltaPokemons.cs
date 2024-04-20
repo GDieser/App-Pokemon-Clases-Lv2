@@ -3,18 +3,22 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using dominio;
 using negocio;
+using System.Configuration;
 
 namespace Pokemon2
 {
     public partial class frmAltaPokemons : Form
     {
         private Pokemon pokemon = null;
+
+        private OpenFileDialog archivo  = null;
         public frmAltaPokemons()
         {
             InitializeComponent();
@@ -61,6 +65,18 @@ namespace Pokemon2
                 negocio.agregar(pokemon);
                 MessageBox.Show("Agregado");
 
+                }
+
+                //Guardo imagen si capturo localmente:
+
+                if (archivo != null && !(tbxUrlImagen.Text.ToUpper().Contains("HTTP")))
+                {
+                    File.Copy(archivo.FileName, ConfigurationManager.AppSettings["folder"] + archivo.SafeFileName);
+
+                    if (archivo != null && !(tbxUrlImagen.Text.ToUpper().Contains("HTTPS")))
+                    {
+                        File.Copy(archivo.FileName, ConfigurationManager.AppSettings["folder"] + archivo.SafeFileName);
+                    }
                 }
 
                 Close();
@@ -117,6 +133,20 @@ namespace Pokemon2
             {
 
                 pbUrlImagen.Load("https://media.licdn.com/dms/image/D4D03AQF0oxCcvOA1bA/profile-displayphoto-shrink_800_800/0/1669689321436?e=2147483647&v=beta&t=aCFumvWK_9BSBZ7O1Q3HHss5iZdbR7fEwEtn2Y9FQgs");
+            }
+        }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog archivo = new OpenFileDialog();
+            archivo.Filter = "jpg|* .jpg|png|* .png";
+            if(archivo.ShowDialog() == DialogResult.OK)
+            {
+                tbxUrlImagen.Text = archivo.FileName;
+                cargarImagen(archivo.FileName);
+
+                //Como guardo imagen?
+                //File.Copy(archivo.FileName, ConfigurationManager.AppSettings["folder"] + archivo.SafeFileName);
             }
         }
     }
